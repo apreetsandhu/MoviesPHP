@@ -1,32 +1,22 @@
-<?php include("top.html");
-include("common.php");
+<?php include("top.html"); 
 
 #Anmolpreet Sandhu, 87685146
-
-#try {
-
-$db = dbLargeConnect();
-
-$fName = $_GET["firstname"];
-$lName = $_GET["lastname"];
-
-#instead of two queries I used a single query to search the movies
-# based on the name of the actor even there is confusion in names
-# this query will search actors as the requirements given for the third query in question
-
-$id = fetchActorID($db, $fName, $lName);
+	#index page of the hw4
 
 ?>
-<h1>Results for <?php echo $fName." ".$lName; ?></h1>
-<?php
-	$rows = searchAllMovies($db, $id, $fName,$lName);
-	$rowCount = $rows->rowCount();
-	if($rowCount >= 1) {
-		printAllMoviesTable($db, $rows);
-	}
 
+<h1>The One Degree of Kevin Bacon</h1>
+<p>Type in an actor's name to see if he/she was ever in a movie with Kevin Bacon!</p>
+<p><img src="images\kevin_bacon.jpg" alt="Kevin Bacon" /></p>
 
+<!-- Add film fields -->
+<form action="add-film.php" method="GET">
+	<fieldset>
+		<legend>Add a new movie</legend>
+		<div>
+			<input type="submit" name="addMovie" value="go" />
+		</div>
+	</fieldset>
+</form>
 
-include("bottom.html"); ?>
-
-
+<?php include("bottom.html"); ?>
