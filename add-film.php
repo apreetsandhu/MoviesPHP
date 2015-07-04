@@ -1,7 +1,7 @@
 <?php include("top.html");
  include("common.php");
 
-#Anmolpreet Sandhu, 87685146
+#Anmolpreet Sandhu
 
 
 try {
