@@ -1,6 +1,6 @@
 <?php include("top.html"); 
 
-#Anmolpreet Sandhu, 87685146
+#Anmolpreet Sandhu
 	#index page of the hw4
 
 ?>
